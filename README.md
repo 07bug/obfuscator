@@ -42,5 +42,11 @@ You can cite Obfuscator-LLVM using the following Bibtex entry:
   doi={10.1109/SPRO.2015.10},
 }
 ```
+编译参数OLLVM 参数 编译后替换 clang.exe 等到VS2019自带 clang.exe 
+替换路径 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\Llvm\x64\bin
+
+mkdir build
+cd build
+D:\CMake\bin\cmake -G “Visual Studio 16 2019” -DLLVM_ENABLE_PROJECTS=“clang” -DCMAKE_BUILD_TYPE=Release -DLLVM_INCLUDE_TESTS=OFF -DLLVM_ENABLE_NEW_PASS_MANAGER=OFF ..\llvm
 
 
